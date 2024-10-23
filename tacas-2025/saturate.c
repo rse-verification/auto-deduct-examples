@@ -1,5 +1,5 @@
 int in; int out;
-  
+
 int read_input() {
   return in;
 }
@@ -14,8 +14,8 @@ int saturate(int x, int lim){
 
 /*@ requires in >= 0;
     ensures
-      in <= 10 ==> out == in*in
-      && in > 10 ==> out == 100;
+      (in <= 10 ==> out == in*in)
+      && (in > 10 ==> out == 100);
 */
 void main() {
   int tmp = read_input();
